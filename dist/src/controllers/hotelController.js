@@ -111,6 +111,29 @@ class HotelController {
         });
     }
     // Upload images
+    // async uploadImages(req: Request, res: Response) {
+    //   try {
+    //     const { hotelId } = req.body;
+    //     const files = req.files as Express.Multer.File[];
+    //     if (!files || files.length === 0) {
+    //       return res.status(400).json({ error: 'No files uploaded' });
+    //     }
+    //     const hotelPath = path.join(DATA_DIR, `${hotelId}.json`);
+    //     const hotelData = await fs.readFile(hotelPath, 'utf-8');
+    //     const hotel: Hotel = JSON.parse(hotelData);
+    //     const imageUrls = files.map(file => `/uploads/images/${file.filename}`);
+    //     hotel.images = [...hotel.images, ...imageUrls];
+    //     await fs.writeFile(
+    //       hotelPath,
+    //       JSON.stringify(hotel, null, 2)
+    //     );
+    //     return res.status(200).json({ images: imageUrls });
+    //   } catch (error) {
+    //     console.error('Error uploading images:', error);
+    //     return res.status(500).json({ error: 'Failed to upload images' });
+    //   }
+    // }
+    // upload image with validaiton
     uploadImages(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
