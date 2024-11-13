@@ -17,20 +17,20 @@ License
 ### Project Overview  
 ### The Hotel Management API provides the following features:  
 
-Insert a new hotel record using a POST request (/hotel).
-Upload multiple images for a hotel via a POST request (/images).
-Retrieve detailed hotel information by ID or slug using a GET request (/hotel/{hotel-id}).
-Update hotel information using a PUT request (/hotel/{hotel-id}).
-The project is designed to follow RESTful principles, with validation and error handling to ensure data integrity.
+Insert a new hotel record using a POST request (/hotel).  
+Upload multiple images for a hotel via a POST request (/images).  
+Retrieve detailed hotel information by ID or slug using a GET request (/hotel/{hotel-id}).  
+Update hotel information using a PUT request (/hotel/{hotel-id}).  
+The project is designed to follow RESTful principles, with validation and error handling to ensure data integrity.  
 
 ### Technologies Used  
-Node.js: JavaScript runtime for building the API.
-Express.js: Web framework for routing and handling HTTP requests.
-TypeScript: For strict typing and better development practices.
-Slugify: For generating slugs based on hotel titles.
-Multer: For handling file uploads (images).
-Jest: For writing unit tests.
-ESLint: For enforcing coding conventions
+Node.js: JavaScript runtime for building the API.  
+Express.js: Web framework for routing and handling HTTP requests.  
+TypeScript: For strict typing and better development practices.  
+Slugify: For generating slugs based on hotel titles.  
+Multer: For handling file uploads (images).  
+Jest: For writing unit tests.  
+ESLint: For enforcing coding conventions  
 
 
 ### 1. Setup Instructions  
@@ -43,7 +43,7 @@ cd W3-Assignment-hotel-api
 
 ### 2. Install Dependencies
 
-Run the following command to install all necessary dependencies:
+Run the following command to install all necessary dependencies:  
 npm install
 
 ### 3. Set Up Environment Variables  
@@ -80,7 +80,7 @@ npm run dev
 This will start the server with nodemon, which watches for file changes and restarts the server automatically.  
 
 ### API Endpoints  
-1. POST /hotel
+#### 1. POST /hotel 
 Insert a new hotel record.
 
 {
@@ -130,7 +130,7 @@ Response:
 Status 201: Hotel created successfully.  
 Status 400: Bad request if validation fails.  
 
-2. POST /images  
+#### 2. POST /images  
 Upload multiple images for a hotel.  
 
 Form Data:  
@@ -149,7 +149,7 @@ Status 200: Returns the hotel data along with image URLs.
 Status 404: Hotel not found.  
 
 
-4. PUT /hotel/{hotel-id}    
+#### 4. PUT /hotel/{hotel-id}    
 
  {
   "title": "hotel awesomeka",
@@ -190,25 +190,25 @@ Status 404: Hotel not found.
       "bedroomCount": 2
     }
   ]
-}
+}  
 
-Response:  
+#### Response:  
 
 Status 200: Hotel updated successfully.  
 Status 400: Bad request if validation fails.  
 Status 404: Hotel not found.  
 
-Testing  
+#### Testing  
 Unit tests for all critical API functionality are written using Jest.  
 
-Run Tests  
+#### Run Tests  
 To run the tests, execute the following command:  
 
 npm test  
 
 This will run all test cases, including validation, CRUD operations, and error handling.  
 
-Error Handling  
+#### Error Handling  
 The application handles errors gracefully and returns appropriate status codes:  
 
 400: Bad Request (e.g., validation errors).  
